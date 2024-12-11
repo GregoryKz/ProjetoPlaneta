@@ -1,0 +1,176 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(270deg, #87EFF6 0%, #FFFFFF 100%);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar li a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #4ABBC2;
+}
+
+.menu {
+    display: none;
+}
+
+/* Main Section */
+main {
+    padding: 60px 80px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.content-left {
+    width: 50%;
+}
+
+.content-left h2 {
+    color: #4ABBC2;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content-left h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.content-left p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4ABBC2;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #388C9B;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #4ABBC2;
+    border: 2px solid #4ABBC2;
+}
+
+.btn-secondary:hover {
+    background-color: #4ABBC2;
+    color: white;
+}
+
+.content-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1050px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-left {
+        width: 100%;
+    }
+
+    .content-right img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}
